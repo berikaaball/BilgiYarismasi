@@ -18,6 +18,7 @@ namespace BilgiYarismasi
             BtnSonraki.Text = "Başla";
         }
 
+        int sayac = 0;
         int soruno = 0, dogru = 0, yanlis = 0;
         bool yarismabasladi = false;
 
@@ -92,6 +93,20 @@ namespace BilgiYarismasi
                 PBoxYanlis.Visible = true;
             }
         }
+     
+
+        private void sure_Tick(object sender, EventArgs e)
+        {
+            sayac++;
+            LblSureDegeri.Text = sayac.ToString();
+
+            if (sayac == 60000)
+            {
+                sure.Stop();
+                MessageBox.Show("Süreniz doldu!");
+                Application.Exit();
+            }
+        }
 
         private void BtnA_Click(object sender, EventArgs e)
         {
@@ -119,6 +134,7 @@ namespace BilgiYarismasi
 
         private void BtnSonraki_Click(object sender, EventArgs e)
         {
+            sure.Start();
 
             if (!yarismabasladi)
             {
@@ -240,6 +256,7 @@ namespace BilgiYarismasi
 
             if (soruno == 11)
             {
+                sure.Stop();
                 RTBoxSoru.Text = "YARIŞMA BİTTİ";
                 BtnA.Text = "";
                 BtnB.Text = "";

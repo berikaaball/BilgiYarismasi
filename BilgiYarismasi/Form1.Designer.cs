@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.RTBoxSoru = new System.Windows.Forms.RichTextBox();
             this.BtnA = new System.Windows.Forms.Button();
             this.BtnB = new System.Windows.Forms.Button();
@@ -44,6 +45,9 @@
             this.PBoxDogru = new System.Windows.Forms.PictureBox();
             this.LblDogruCevap = new System.Windows.Forms.Label();
             this.LblCevap = new System.Windows.Forms.Label();
+            this.sure = new System.Windows.Forms.Timer(this.components);
+            this.LblSure = new System.Windows.Forms.Label();
+            this.LblSureDegeri = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PBoxYanlis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBoxDogru)).BeginInit();
             this.SuspendLayout();
@@ -100,7 +104,7 @@
             // 
             this.LblSoruNo.AutoSize = true;
             this.LblSoruNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblSoruNo.Location = new System.Drawing.Point(540, 36);
+            this.LblSoruNo.Location = new System.Drawing.Point(493, 37);
             this.LblSoruNo.Name = "LblSoruNo";
             this.LblSoruNo.Size = new System.Drawing.Size(81, 22);
             this.LblSoruNo.TabIndex = 5;
@@ -110,7 +114,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(557, 76);
+            this.label2.Location = new System.Drawing.Point(510, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 22);
             this.label2.TabIndex = 6;
@@ -120,7 +124,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(557, 116);
+            this.label3.Location = new System.Drawing.Point(510, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 22);
             this.label3.TabIndex = 7;
@@ -140,7 +144,7 @@
             // 
             this.LblSoru.AutoSize = true;
             this.LblSoru.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblSoru.Location = new System.Drawing.Point(638, 36);
+            this.LblSoru.Location = new System.Drawing.Point(591, 37);
             this.LblSoru.Name = "LblSoru";
             this.LblSoru.Size = new System.Drawing.Size(20, 22);
             this.LblSoru.TabIndex = 9;
@@ -150,7 +154,7 @@
             // 
             this.LblDogru.AutoSize = true;
             this.LblDogru.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblDogru.Location = new System.Drawing.Point(638, 76);
+            this.LblDogru.Location = new System.Drawing.Point(591, 77);
             this.LblDogru.Name = "LblDogru";
             this.LblDogru.Size = new System.Drawing.Size(20, 22);
             this.LblDogru.TabIndex = 10;
@@ -160,7 +164,7 @@
             // 
             this.LblYanlis.AutoSize = true;
             this.LblYanlis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblYanlis.Location = new System.Drawing.Point(638, 116);
+            this.LblYanlis.Location = new System.Drawing.Point(591, 117);
             this.LblYanlis.Name = "LblYanlis";
             this.LblYanlis.Size = new System.Drawing.Size(20, 22);
             this.LblYanlis.TabIndex = 11;
@@ -210,11 +214,38 @@
             this.LblCevap.Text = "Cevap";
             this.LblCevap.Visible = false;
             // 
+            // sure
+            // 
+            this.sure.Interval = 1000;
+            this.sure.Tick += new System.EventHandler(this.sure_Tick);
+            // 
+            // LblSure
+            // 
+            this.LblSure.AutoSize = true;
+            this.LblSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblSure.Location = new System.Drawing.Point(658, 37);
+            this.LblSure.Name = "LblSure";
+            this.LblSure.Size = new System.Drawing.Size(53, 22);
+            this.LblSure.TabIndex = 16;
+            this.LblSure.Text = "Süre:";
+            // 
+            // LblSureDegeri
+            // 
+            this.LblSureDegeri.AutoSize = true;
+            this.LblSureDegeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblSureDegeri.Location = new System.Drawing.Point(735, 37);
+            this.LblSureDegeri.Name = "LblSureDegeri";
+            this.LblSureDegeri.Size = new System.Drawing.Size(20, 22);
+            this.LblSureDegeri.TabIndex = 17;
+            this.LblSureDegeri.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 343);
+            this.Controls.Add(this.LblSureDegeri);
+            this.Controls.Add(this.LblSure);
             this.Controls.Add(this.LblCevap);
             this.Controls.Add(this.LblDogruCevap);
             this.Controls.Add(this.PBoxYanlis);
@@ -234,7 +265,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            //this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBoxYanlis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBoxDogru)).EndInit();
             this.ResumeLayout(false);
@@ -260,6 +290,9 @@
         private System.Windows.Forms.PictureBox PBoxYanlis;
         private System.Windows.Forms.Label LblDogruCevap;
         private System.Windows.Forms.Label LblCevap;
+        private System.Windows.Forms.Timer sure;
+        private System.Windows.Forms.Label LblSure;
+        private System.Windows.Forms.Label LblSureDegeri;
     }
 }
 
