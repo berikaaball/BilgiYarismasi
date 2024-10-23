@@ -37,12 +37,39 @@ namespace BilgiYarismasi
                 dogru++;
                 LblDogru.Text = dogru.ToString();
                 PBoxDogru.Visible = true;
+                BtnA.BackColor = Color.Red;
+                BtnB.BackColor = Color.Green;
+                BtnC.BackColor = Color.Red;
+                BtnD.BackColor = Color.Red;
             }
             else
             {
                 yanlis++;
                 LblYanlis.Text = yanlis.ToString();
                 PBoxYanlis.Visible = true;
+                BtnB.BackColor = Color.Red;
+
+                if (LblDogruCevap.Text == BtnA.Text)
+                {
+                    BtnA.BackColor = Color.Green;
+                    BtnC.BackColor= Color.Red;
+                    BtnD.BackColor = Color.Red;
+                    BtnB.BackColor = Color.Red;
+                }
+                else if (LblDogruCevap.Text == BtnC.Text)
+                {
+                    BtnC.BackColor = Color.Green;
+                    BtnD.BackColor = Color.Red;
+                    BtnB.BackColor = Color.Red;
+                    BtnA.BackColor = Color.Red;
+                }
+                else if (LblDogruCevap.Text == BtnD.Text)
+                {
+                    BtnD.BackColor = Color.Green;
+                    BtnB.BackColor = Color.Red;
+                    BtnA.BackColor = Color.Red;
+                    BtnC.BackColor = Color.Red;
+                }
             }
         }
 
@@ -61,12 +88,38 @@ namespace BilgiYarismasi
                 dogru++;
                 LblDogru.Text = dogru.ToString();
                 PBoxDogru.Visible = true;
+                BtnA.BackColor = Color.Red;
+                BtnB.BackColor = Color.Red;
+                BtnC.BackColor = Color.Green;
+                BtnD.BackColor = Color.Red;
             }
             else
             {
                 yanlis++;
                 LblYanlis.Text = yanlis.ToString();
                 PBoxYanlis.Visible = true;
+
+                if (LblDogruCevap.Text == BtnA.Text)
+                {
+                    BtnA.BackColor = Color.Green;
+                    BtnC.BackColor = Color.Red;
+                    BtnD.BackColor = Color.Red;
+                    BtnB.BackColor = Color.Red;
+                }
+                else if (LblDogruCevap.Text == BtnB.Text)
+                {
+                    BtnB.BackColor = Color.Green;
+                    BtnD.BackColor = Color.Red;
+                    BtnC.BackColor = Color.Red;
+                    BtnA.BackColor = Color.Red;
+                }
+                else if (LblDogruCevap.Text == BtnD.Text)
+                {
+                    BtnD.BackColor = Color.Green;
+                    BtnB.BackColor = Color.Red;
+                    BtnA.BackColor = Color.Red;
+                    BtnC.BackColor = Color.Red;
+                }
             }
         }
 
@@ -85,12 +138,38 @@ namespace BilgiYarismasi
                 dogru++;
                 LblDogru.Text = dogru.ToString();
                 PBoxDogru.Visible = true;
+                BtnA.BackColor = Color.Red;
+                BtnB.BackColor = Color.Red;
+                BtnC.BackColor = Color.Red;
+                BtnD.BackColor = Color.Green;
             }
             else
             {
                 yanlis++;
                 LblYanlis.Text = yanlis.ToString();
                 PBoxYanlis.Visible = true;
+
+                if (LblDogruCevap.Text == BtnA.Text)
+                {
+                    BtnA.BackColor = Color.Green;
+                    BtnC.BackColor = Color.Red;
+                    BtnD.BackColor = Color.Red;
+                    BtnB.BackColor = Color.Red;
+                }
+                else if (LblDogruCevap.Text == BtnB.Text)
+                {
+                    BtnB.BackColor = Color.Green;
+                    BtnD.BackColor = Color.Red;
+                    BtnC.BackColor = Color.Red;
+                    BtnA.BackColor = Color.Red;
+                }
+                else if (LblDogruCevap.Text == BtnC.Text)
+                {
+                    BtnC.BackColor = Color.Green;
+                    BtnB.BackColor = Color.Red;
+                    BtnA.BackColor = Color.Red;
+                    BtnD.BackColor = Color.Red;
+                }
             }
         }
      
@@ -123,17 +202,48 @@ namespace BilgiYarismasi
                 dogru++;
                 LblDogru.Text = dogru.ToString();
                 PBoxDogru.Visible = true;
+                BtnA.BackColor = Color.Green;
+                BtnB.BackColor = Color.Red;
+                BtnC.BackColor = Color.Red;
+                BtnD.BackColor = Color.Red;
             }
             else
             {
                 yanlis++;
                 LblYanlis.Text = yanlis.ToString();
                 PBoxYanlis.Visible = true;
+
+                if (LblDogruCevap.Text == BtnD.Text)
+                {
+                    BtnD.BackColor = Color.Green;
+                    BtnC.BackColor = Color.Red;
+                    BtnA.BackColor = Color.Red;
+                    BtnB.BackColor = Color.Red;
+                }
+                else if (LblDogruCevap.Text == BtnB.Text)
+                {
+                    BtnB.BackColor = Color.Green;
+                    BtnD.BackColor = Color.Red;
+                    BtnC.BackColor = Color.Red;
+                    BtnA.BackColor = Color.Red;
+                }
+                else if (LblDogruCevap.Text == BtnC.Text)
+                {
+                    BtnC.BackColor = Color.Green;
+                    BtnB.BackColor = Color.Red;
+                    BtnA.BackColor = Color.Red;
+                    BtnD.BackColor = Color.Red;
+                }
+
             }
         }
 
         private void BtnSonraki_Click(object sender, EventArgs e)
         {
+            BtnA.BackColor = SystemColors.Control;
+            BtnB.BackColor = SystemColors.Control;
+            BtnC.BackColor = SystemColors.Control;
+            BtnD.BackColor = SystemColors.Control;
             sure.Start();
 
             if (!yarismabasladi)
@@ -152,17 +262,16 @@ namespace BilgiYarismasi
             soruno++;
             LblSoru.Text = soruno.ToString();
 
-            if (soruno == 1) 
+            if (soruno == 1)
             {
                 RTBoxSoru.Text = "Cumhuriyet kaç yılında ilan edilmiştir?";
-            
-            BtnA.Text = "1920";
-            BtnB.Text = "1921";
-            BtnC.Text = "1922";
-            BtnD.Text = "1923";
-            LblDogruCevap.Text = "1923";
-            }
 
+                BtnA.Text = "1920";
+                BtnB.Text = "1921";
+                BtnC.Text = "1922";
+                BtnD.Text = "1923";
+                LblDogruCevap.Text = "1923";
+            }
             if (soruno == 2)
             {
                 RTBoxSoru.Text = "Hangi il Ege Bölgesinde bulunmaz?";

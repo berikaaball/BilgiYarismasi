@@ -243,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 343);
+            this.ClientSize = new System.Drawing.Size(804, 347);
             this.Controls.Add(this.LblSureDegeri);
             this.Controls.Add(this.LblSure);
             this.Controls.Add(this.LblCevap);
