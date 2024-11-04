@@ -48,21 +48,22 @@
             this.sure = new System.Windows.Forms.Timer(this.components);
             this.LblSure = new System.Windows.Forms.Label();
             this.LblSureDegeri = new System.Windows.Forms.Label();
+            this.PBIlerleme = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.PBoxYanlis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBoxDogru)).BeginInit();
             this.SuspendLayout();
             // 
             // RTBoxSoru
             // 
-            this.RTBoxSoru.Location = new System.Drawing.Point(0, 0);
+            this.RTBoxSoru.Location = new System.Drawing.Point(272, 14);
             this.RTBoxSoru.Name = "RTBoxSoru";
-            this.RTBoxSoru.Size = new System.Drawing.Size(458, 216);
+            this.RTBoxSoru.Size = new System.Drawing.Size(409, 115);
             this.RTBoxSoru.TabIndex = 0;
             this.RTBoxSoru.Text = "";
             // 
             // BtnA
             // 
-            this.BtnA.Location = new System.Drawing.Point(12, 231);
+            this.BtnA.Location = new System.Drawing.Point(258, 173);
             this.BtnA.Name = "BtnA";
             this.BtnA.Size = new System.Drawing.Size(218, 47);
             this.BtnA.TabIndex = 1;
@@ -72,7 +73,7 @@
             // 
             // BtnB
             // 
-            this.BtnB.Location = new System.Drawing.Point(236, 231);
+            this.BtnB.Location = new System.Drawing.Point(482, 173);
             this.BtnB.Name = "BtnB";
             this.BtnB.Size = new System.Drawing.Size(218, 47);
             this.BtnB.TabIndex = 2;
@@ -82,7 +83,7 @@
             // 
             // BtnC
             // 
-            this.BtnC.Location = new System.Drawing.Point(12, 284);
+            this.BtnC.Location = new System.Drawing.Point(258, 226);
             this.BtnC.Name = "BtnC";
             this.BtnC.Size = new System.Drawing.Size(218, 47);
             this.BtnC.TabIndex = 3;
@@ -92,7 +93,7 @@
             // 
             // BtnD
             // 
-            this.BtnD.Location = new System.Drawing.Point(236, 284);
+            this.BtnD.Location = new System.Drawing.Point(482, 226);
             this.BtnD.Name = "BtnD";
             this.BtnD.Size = new System.Drawing.Size(218, 47);
             this.BtnD.TabIndex = 4;
@@ -104,7 +105,7 @@
             // 
             this.LblSoruNo.AutoSize = true;
             this.LblSoruNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblSoruNo.Location = new System.Drawing.Point(493, 37);
+            this.LblSoruNo.Location = new System.Drawing.Point(717, 12);
             this.LblSoruNo.Name = "LblSoruNo";
             this.LblSoruNo.Size = new System.Drawing.Size(81, 22);
             this.LblSoruNo.TabIndex = 5;
@@ -114,7 +115,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(510, 77);
+            this.label2.Location = new System.Drawing.Point(734, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 22);
             this.label2.TabIndex = 6;
@@ -124,7 +125,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(510, 117);
+            this.label3.Location = new System.Drawing.Point(734, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 22);
             this.label3.TabIndex = 7;
@@ -132,7 +133,7 @@
             // 
             // BtnSonraki
             // 
-            this.BtnSonraki.Location = new System.Drawing.Point(537, 160);
+            this.BtnSonraki.Location = new System.Drawing.Point(721, 152);
             this.BtnSonraki.Name = "BtnSonraki";
             this.BtnSonraki.Size = new System.Drawing.Size(218, 47);
             this.BtnSonraki.TabIndex = 8;
@@ -144,7 +145,7 @@
             // 
             this.LblSoru.AutoSize = true;
             this.LblSoru.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblSoru.Location = new System.Drawing.Point(591, 37);
+            this.LblSoru.Location = new System.Drawing.Point(815, 12);
             this.LblSoru.Name = "LblSoru";
             this.LblSoru.Size = new System.Drawing.Size(20, 22);
             this.LblSoru.TabIndex = 9;
@@ -154,7 +155,7 @@
             // 
             this.LblDogru.AutoSize = true;
             this.LblDogru.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblDogru.Location = new System.Drawing.Point(591, 77);
+            this.LblDogru.Location = new System.Drawing.Point(815, 52);
             this.LblDogru.Name = "LblDogru";
             this.LblDogru.Size = new System.Drawing.Size(20, 22);
             this.LblDogru.TabIndex = 10;
@@ -164,7 +165,7 @@
             // 
             this.LblYanlis.AutoSize = true;
             this.LblYanlis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblYanlis.Location = new System.Drawing.Point(591, 117);
+            this.LblYanlis.Location = new System.Drawing.Point(815, 92);
             this.LblYanlis.Name = "LblYanlis";
             this.LblYanlis.Size = new System.Drawing.Size(20, 22);
             this.LblYanlis.TabIndex = 11;
@@ -173,7 +174,7 @@
             // PBoxYanlis
             // 
             this.PBoxYanlis.Image = global::BilgiYarismasi.Properties.Resources.yanlis;
-            this.PBoxYanlis.Location = new System.Drawing.Point(631, 228);
+            this.PBoxYanlis.Location = new System.Drawing.Point(142, 12);
             this.PBoxYanlis.Name = "PBoxYanlis";
             this.PBoxYanlis.Size = new System.Drawing.Size(124, 103);
             this.PBoxYanlis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -184,7 +185,7 @@
             // PBoxDogru
             // 
             this.PBoxDogru.Image = global::BilgiYarismasi.Properties.Resources.dogru;
-            this.PBoxDogru.Location = new System.Drawing.Point(497, 228);
+            this.PBoxDogru.Location = new System.Drawing.Point(12, 12);
             this.PBoxDogru.Name = "PBoxDogru";
             this.PBoxDogru.Size = new System.Drawing.Size(124, 103);
             this.PBoxDogru.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -196,7 +197,7 @@
             // 
             this.LblDogruCevap.AutoSize = true;
             this.LblDogruCevap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblDogruCevap.Location = new System.Drawing.Point(196, 355);
+            this.LblDogruCevap.Location = new System.Drawing.Point(447, 334);
             this.LblDogruCevap.Name = "LblDogruCevap";
             this.LblDogruCevap.Size = new System.Drawing.Size(111, 22);
             this.LblDogruCevap.TabIndex = 14;
@@ -207,7 +208,7 @@
             // 
             this.LblCevap.AutoSize = true;
             this.LblCevap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblCevap.Location = new System.Drawing.Point(313, 355);
+            this.LblCevap.Location = new System.Drawing.Point(564, 334);
             this.LblCevap.Name = "LblCevap";
             this.LblCevap.Size = new System.Drawing.Size(62, 22);
             this.LblCevap.TabIndex = 15;
@@ -223,7 +224,7 @@
             // 
             this.LblSure.AutoSize = true;
             this.LblSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblSure.Location = new System.Drawing.Point(658, 37);
+            this.LblSure.Location = new System.Drawing.Point(872, 12);
             this.LblSure.Name = "LblSure";
             this.LblSure.Size = new System.Drawing.Size(53, 22);
             this.LblSure.TabIndex = 16;
@@ -233,17 +234,26 @@
             // 
             this.LblSureDegeri.AutoSize = true;
             this.LblSureDegeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblSureDegeri.Location = new System.Drawing.Point(735, 37);
+            this.LblSureDegeri.Location = new System.Drawing.Point(931, 14);
             this.LblSureDegeri.Name = "LblSureDegeri";
             this.LblSureDegeri.Size = new System.Drawing.Size(20, 22);
             this.LblSureDegeri.TabIndex = 17;
             this.LblSureDegeri.Text = "0";
             // 
+            // PBIlerleme
+            // 
+            this.PBIlerleme.Location = new System.Drawing.Point(272, 135);
+            this.PBIlerleme.Maximum = 121;
+            this.PBIlerleme.Name = "PBIlerleme";
+            this.PBIlerleme.Size = new System.Drawing.Size(409, 23);
+            this.PBIlerleme.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 347);
+            this.ClientSize = new System.Drawing.Size(983, 301);
+            this.Controls.Add(this.PBIlerleme);
             this.Controls.Add(this.LblSureDegeri);
             this.Controls.Add(this.LblSure);
             this.Controls.Add(this.LblCevap);
@@ -293,6 +303,7 @@
         private System.Windows.Forms.Timer sure;
         private System.Windows.Forms.Label LblSure;
         private System.Windows.Forms.Label LblSureDegeri;
+        private System.Windows.Forms.ProgressBar PBIlerleme;
     }
 }
 

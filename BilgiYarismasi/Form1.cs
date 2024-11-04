@@ -187,6 +187,7 @@ namespace BilgiYarismasi
             }
         }
 
+
         private void BtnA_Click(object sender, EventArgs e)
         {
             BtnA.Enabled = false;
@@ -240,6 +241,8 @@ namespace BilgiYarismasi
 
         private void BtnSonraki_Click(object sender, EventArgs e)
         {
+            PBIlerleme.Value += 11;
+
             BtnA.BackColor = SystemColors.Control;
             BtnB.BackColor = SystemColors.Control;
             BtnC.BackColor = SystemColors.Control;
